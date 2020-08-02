@@ -1,3 +1,40 @@
-<h1>login</h1>
-<i class="material-icons">tapas</i>
-<h2>{{hello}}</h2>
+<div class="row d-flex justify-content-center align-items-center">
+  <div class="col-md-5">
+    <div class="card">
+
+      <img class="card-img-top" src="/img/sidebar-1.jpg" alt="Card image cap">
+      
+      <div class="card-header card-header-primary">
+        <h4 class="card-title">Bienvenido</h4>
+        <p class="card-category">Si aún no tienes una cuenta registrate <a href="/register">aquí</a></p>
+      </div>
+
+      <div class="card-body">
+        <form action="/auth/login" method="POST">
+          <div class="row">
+            
+            <div class="col-md-12">
+              <div class="form-group">
+                <label class="bmd-label-floating">Email</label>
+                <input type="text" class="form-control" name="name">
+              </div>
+            </div>
+
+          </div>
+          <div class="row">
+            <div class="col-md-12">
+              <div class="form-group">
+                <label class="bmd-label-floating">password</label>
+                <input type="password" class="form-control" name="password">
+              </div>
+            </div>
+          </div>
+          
+          <button type="submit" class="btn btn-primary pull-right">Ingresar</button>
+          <div class="clearfix"></div>
+        </form>
+      </div>
+    </div>
+  </div>
+  
+</div>

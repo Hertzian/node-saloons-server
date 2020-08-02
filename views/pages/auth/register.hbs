@@ -1,1 +1,55 @@
-<h1>register</h1>
+<div class="row d-flex justify-content-center align-items-center">
+  <div class="col-md-8">
+    <div class="card">
+      <img class="card-img-top" src="/img/cover.jpg" alt="Card image cap">
+      <div class="card-header card-header-primary">
+        <h4 class="card-title">Regístrate</h4>
+        <p class="card-category">Si ya tienes una cuenta <a href="/register">ingresa</a></p>
+      </div>
+      <div class="card-body">
+        <form action="/auth/register" method="POST">
+          <div class="row">
+
+            <div class="col-md-6">
+              <div class="form-group">
+                <label class="bmd-label-floating">Nombre</label>
+                <input type="text" class="form-control" name="name">
+              </div>
+            </div>
+
+            <div class="col-md-6">
+              <div class="form-group">
+                <label class="bmd-label-floating">Teléfono</label>
+                <input type="text" class="form-control" name="phone">
+              </div>
+            </div>
+
+          </div>
+
+          <div class="row">
+
+            <div class="col-md-6">
+              <div class="form-group">
+                <label class="bmd-label-floating">Contraseña</label>
+                <input type="password" class="form-control" name="password">
+              </div>
+            </div>
+
+            <div class="col-md-6">
+              <div class="form-group">
+                <label class="bmd-label-floating">Confirma tu contraseña</label>
+                <input type="password" class="form-control" name="password2">
+              </div>
+            </div>
+
+          </div>
+          
+          <button type="submit" class="btn btn-primary pull-right">Registro</button>
+          <div class="clearfix"></div>
+
+        </form>
+      </div>
+    </div>
+  </div>
+  
+</div>

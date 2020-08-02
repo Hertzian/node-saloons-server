@@ -12,7 +12,9 @@ exports.loginView = (req, res, next) => {
 // @route   POST /auth/login
 // @access  Public
 exports.login = (req, res, next) => {
-  console.log('logged in!')
+  console.log('logged in')
+  console.log(req.body)
+  res.redirect('/auth/login')
 }
 
 // @desc    render register page
@@ -27,4 +29,6 @@ exports.registerView = (req, res, next) => {
 // @access  Public
 exports.register = (req, res, next) => {
   console.log('registered!')
+  console.log(req.body)
+  res.redirect('/auth/register')
 }

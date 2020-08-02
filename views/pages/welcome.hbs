@@ -1,1 +1,270 @@
-<h1>welcome</h1>
+<!-- NAVBAR -->
+<nav id="main-nav" class="navbar navbar-expand-md navbar-light bg-primary fixed-top">
+  <div class="container">
+    <a href="#home" class="navbar-brand">
+      {{!-- <img src="img/mlogo.png" width="50" height="50" alt=""> --}}
+      <h3 class="d-inline align-middle"><i class="material-icons">tapas</i> Saloon's</h3>
+    </a>
+    <button class="navbar-toggler" data-toggle="collapse" data-target="navbarCollapse">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div id="navbarCollapse" class="collapse navbar-collapse">
+      <ul class="navbar-nav ml-auto">
+        <li class="nav-item">
+          <a href="#home" class="nav-link">Home</a>
+        </li>
+        <li class="nav-item">
+          <a href="#about" class="nav-link">About</a>
+        </li>
+        <li class="nav-item">
+          <a href="/auth/register" class="nav-link">Registro</a>
+        </li>
+        <li class="nav-item">
+          <a href="/auth/login" class="nav-link">Ingresa</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<!-- SHOWCASE -->
+<section id="showcase" class="py-5">
+  <div class="primary-overlay text-white">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-6 text-center">
+          <h1 class="display-2 mt-5 pt-5">
+            Do what you dream of...
+          </h1>
+          <p class="lead">Lorem ipsum dolor sit amet consectetur adipisicing elit. Dicta, eveniet.</p>
+          <a href="#" class="btn btn-primary btn-lg text-white">Read more</a>
+        </div>
+        <div class="col-lg-6">
+          <img src="img/book.png" alt="" class="img-fluid d-none d-lg-block">
+        </div>
+      </div>
+    </div>
+  </div> 
+</section>
+
+<!-- NEWSLETTER -->
+<section id="newsletter" class="bg-dark text-white py-5">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-4 mb-resp">
+        <input type="text" class="form-control form-control-lg" placeholder="Enter name">
+      </div>
+      <div class="col-md-4">
+        <input type="text" class="form-control form-control-lg mb-resp" placeholder="Enter email">
+      </div>
+      <div class="col-md-4">
+        <button class="btn btn-primary btn-lg btn-block">Subscribe</button>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- BOXES -->
+<section id="boxes" class="py-5">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-3">
+        <div class="card text-center border-primary mb-resp">
+          <div class="card-body">
+            <h3 class="text-primary">Be better</h3>
+            <p class="text-muted">Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquam, cupiditate!</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-3">
+        <div class="card text-center bg-primary text-white mb-resp">
+          <div class="card-body">
+            <h3>Be smarter</h3>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquam, cupiditate!</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-3">
+        <div class="card text-center border-primary mb-resp">
+          <div class="card-body">
+            <h3 class="text-primary">Be faster</h3>
+            <p class="text-muted">Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquam, cupiditate!</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-3">
+        <div class="card text-center bg-primary text-white mb-resp">
+          <div class="card-body">
+            <h3>Be stronger</h3>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquam, cupiditate!</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ABOUT / WHY SECTIOM -->
+<section id="about" class="py-5 text-center bg-dark">
+  <div class="container">
+    <div class="row">
+      <div class="col">
+        <div class="info-header mb-5">
+          <h1 class="text-white pb-3">
+            Why this book?
+          </h1>
+          <p class="lead text-light pb-3">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas, incidunt.</p>
+        </div>
+
+        <!-- ACCORDION -->
+        <div id="accordion">
+          <div class="card">
+            <div class="card-header">
+              <h5 class="mb-0">
+                <div href="#collapse1" data-toggle="collapse" data-parent="#accordion" class="text-light">
+                  Get inspired
+                </div>
+              </h5>
+            </div>
+
+            <div id="collapse1" class="collapse show">
+              <div class="card-body">
+                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nesciunt voluptate nostrum mollitia ex, nisi, soluta nemo optio aut veritatis quam ipsum et adipisci delectus recusandae. Numquam, reprehenderit? Sapiente, maxime consequuntur deleniti tempore, illum unde fugit dicta assumenda harum quod doloribus debitis eligendi, nulla odio beatae iste reiciendis quis perferendis rerum.
+              </div>
+            </div>
+          </div>
+          <div class="card">
+            <div class="card-header">
+              <h5 class="mb-0">
+                <div href="#collapse2" data-toggle="collapse" data-parent="#accordion" class="text-light">
+                  Gain the knowledge
+                </div>
+              </h5>
+            </div>
+
+            <div id="collapse2" class="collapse show">
+              <div class="card-body">
+                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nesciunt voluptate nostrum mollitia ex, nisi, soluta nemo optio aut veritatis quam ipsum et adipisci delectus recusandae. Numquam, reprehenderit? Sapiente, maxime consequuntur deleniti tempore, illum unde fugit dicta assumenda harum quod doloribus debitis eligendi, nulla odio beatae iste reiciendis quis perferendis rerum.
+              </div>
+            </div>
+          </div>
+          <div class="card">
+            <div class="card-header">
+              <h5 class="mb-0">
+                <div href="#collapse3" data-toggle="collapse" data-parent="#accordion" class="text-light">
+                  Open your mind
+                </div>
+              </h5>
+            </div>
+
+            <div id="collapse3" class="collapse show">
+              <div class="card-body">
+                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nesciunt voluptate nostrum mollitia ex, nisi, soluta nemo optio aut veritatis quam ipsum et adipisci delectus recusandae. Numquam, reprehenderit? Sapiente, maxime consequuntur deleniti tempore, illum unde fugit dicta assumenda harum quod doloribus debitis eligendi, nulla odio beatae iste reiciendis quis perferendis rerum.
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- AUTHORS -->
+<section id="authors" class="my-5 text-center">
+  <div class="container">
+    <div class="row">
+      <div class="col">
+        <div class="info-header mb-5">
+          <h1 class="text-primary pb-3">
+            Meet the Authors
+          </h1>
+          <p class="lead text-light">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Blanditiis tempore, veniam fugit necessitatibus tenetur dignissimos.</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-lg-3 col-md-6">
+        <div class="card">
+          <div class="card-body">
+            <img src="img/person1.jpg" alt="" class="img-fluid rounded-circle w-50 mb-3">
+            <h3>Susan Williams</h3>
+            <h5 class="text-muted">Lead writer</h5>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt praesentium tempora molestias adipisci? Molestias, cumque?</p>
+            
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-3 col-md-6">
+        <div class="card">
+          <div class="card-body">
+            <img src="img/person2.jpg" alt="" class="img-fluid rounded-circle w-50 mb-3">
+            <h3>Grace Smith</h3>
+            <h5 class="text-muted">Co-writer</h5>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt praesentium tempora molestias adipisci? Molestias, cumque?</p>
+            
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-3 col-md-6">
+        <div class="card">
+          <div class="card-body">
+            <img src="img/person3.jpg" alt="" class="img-fluid rounded-circle w-50 mb-3">
+            <h3>John Doe</h3>
+            <h5 class="text-muted">Editor</h5>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt praesentium tempora molestias adipisci? Molestias, cumque?</p>
+            
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-3 col-md-6">
+        <div class="card">
+          <div class="card-body">
+            <img src="img/person4.jpg" alt="" class="img-fluid rounded-circle w-50 mb-3">
+            <h3>Kevin Swanson</h3>
+            <h5 class="text-muted">Designer</h5>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt praesentium tempora molestias adipisci? Molestias, cumque?</p>
+            
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section id="contact" class="bg-dark py-5">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-9">
+        <h3 class="text-light">Get in touch</h3>
+        <p class="lead text-light">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Numquam, molestias.</p>
+        <form action="">
+          <div class="input-group input-group-lg mb-3">
+            <div class="input-group-prepend">
+              
+            </div>
+            <input type="text" class="form-control" placeholder="Name">
+          </div>
+          <div class="input-group input-group-lg mb-3">
+            <div class="input-group-prepend">
+              
+            </div>
+            <input type="text" class="form-control" placeholder="Email">
+          </div>
+          <div class="input-group input-group-lg mb-3">
+            <div class="input-group-prepend">
+              
+            </div>
+            <textarea class="form-control" placeholder="Message" row="5"></textarea>
+          </div>
+          <input type="submit" value="Submit" class="btn btn-primary btn-block btn-lg">
+        </form>
+      </div>
+
+      <div class="col-lg-3 align-self-center">
+        <img src="img/mlogo.png" alt="" class="img-fluid">
+      </div>
+    </div>
+  </div>
+</section>

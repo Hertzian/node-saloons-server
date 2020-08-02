@@ -20,37 +20,30 @@
 </head>
 
 <body class="dark-edition">
-  <div class="wrapper ">
-    
-    <div class="main-panel">
-      
+  <div class="container">
+    {{!-- main content --}}
+    <div class="d-flex justify-content-center">
+      <a href="/auth/register" class="btn btn-primary">registro</a>
+        <a href="/auth/login" class="btn btn-primary">login</a>
+        <a href="/" class="btn btn-primary">bienvenido</a>
+        <a href="/users" class="btn btn-primary">dashboard</a>
+    </div>
+    {{{body}}}
+    {{!-- /end main content --}}
 
-      {{!-- main content --}}
-
-      <div class="content">
-        <div class="container-fluid">
-          <a href="/auth/register" class="btn btn-primary">registro</a>
-          <a href="/" class="btn btn-primary">bienvenido</a>
-          <a href="/users" class="btn btn-primary">dashboard</a>
-          {{{body}}}
-          
+    {{!-- footer --}}
+    <footer class="footer d-flex justify-content-center">
+      <div class="container-fluid">
+        <div class="copyright" id="date">
+          <a href="https://eduardoaguilar.dev" target="_blank">Lalo Aguilar</a> &copy <span>2020</span>
         </div>
-      </div> 
+      </div>
+    </footer>
+    {{!-- /end footer --}}
+  </div>
 
-      {{!-- /end main content --}}
-
-      {{!-- footer --}}
-      <footer class="footer">
-        <div class="container-fluid">
-          <div class="copyright float-right" id="date">
-            <a href="https://eduardoaguilar.dev" target="_blank">Lalo Aguilar</a> &copy <span>2020</span>
-          </div>
-        </div>
-      </footer>
-      {{!-- /end footer --}}
-
-      {{!-- core js files --}}
-      <!--   Core JS Files   -->
+  {{!-- core js files --}}
+  <!--   Core JS Files   -->
   <script src="/js/core/jquery.min.js"></script>
   <script src="/js/core/popper.min.js"></script>
   <script src="/js/core/bootstrap-material-design.min.js"></script>

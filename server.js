@@ -1,4 +1,5 @@
 const express = require('express')
+const path = require('path')
 const dotenv = require('dotenv')
 const hbs = require('express-handlebars')
 dotenv.config({path: './config/config.env'})
@@ -27,12 +28,15 @@ const eventsRoutes = require('./routes/events')
 const saloonsRoutes = require('./routes/saloons')
 const usersRoutes = require('./routes/users')
 
+// static folder
+app.use(express.static(path.join(__dirname, 'public')))
+
 // use routes
-app.use('/', (req, res, next) => res.render('pages/welcome'))
 app.use('/auth', authRoutes)
 app.use('/events', eventsRoutes)
 app.use('/saloons', saloonsRoutes)
 app.use('/users', usersRoutes)
+app.use('/', (req, res, next) => res.render('pages/welcome', {layout: 'clear'}))
 
 app.listen(
   process.env.PORT,

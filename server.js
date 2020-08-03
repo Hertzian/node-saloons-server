@@ -3,6 +3,8 @@ const path = require('path')
 const dotenv = require('dotenv')
 const hbs = require('express-handlebars')
 dotenv.config({path: './config/config.env'})
+const session = require('express-session')
+const flash = require('express-flash')
 const connectDB = require('./config/db')
 
 const app = express()
@@ -16,6 +18,25 @@ app.engine('hbs', hbs({
   extname: 'hbs'
 }))
 app.set('view engine', 'hbs')
+
+// session
+app.use(session({
+  secret: process.env.SESSION_SECRET,
+  resave: true,
+  saveUninitialized: true
+}))
+
+// flash
+app.use(flash())
+
+//global vars for flash
+app.use((req, res, next) => {
+  res.locals.success = req.flash('success')
+  res.locals.warning = req.flash('warning')
+  res.locals.danger = req.flash('danger')
+  res.locals.error = req.flash('error')
+  next()
+})
 
 //to parse & enconde req
 app.use(express.urlencoded(

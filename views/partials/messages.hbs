@@ -1,0 +1,44 @@
+{{#if warning}}
+<div class="alert alert-warning">
+  <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+    <i class="material-icons">close</i>
+  </button>
+  <span>{{warning}}</span>
+</div>
+{{/if}}
+
+{{#if success}}
+<div class="alert alert-success">
+  <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+    <i class="material-icons">close</i>
+  </button>
+  <span>{{success}}</span>
+</div>
+{{/if}}
+{{#if danger}}
+<div class="alert alert-danger">
+  <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+    <i class="material-icons">close</i>
+  </button>
+  <span>{{danger}}</span>
+</div>
+{{/if}}
+
+{{#if error}}
+<div class="alert alert-danger">
+  <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+    <i class="material-icons">close</i>
+  </button>
+  <span>{{error}}</span>
+</div>
+{{/if}}
+
+{{#each errors}}
+<div class="alert alert-info">
+  <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+    <i class="material-icons">close</i>
+  </button>
+  <span>{{this.msg}}</span>
+</div>
+{{/each}}
+

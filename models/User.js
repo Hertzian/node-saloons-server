@@ -6,9 +6,18 @@ const UserSchema = new mongoose.Schema({
     trim: true,
     required: [true, 'El nombre es obligatorio']
   },
+  email: {
+    type: String,
+    required: [true, 'El email es obligatorio']
+  },
   phone: {
     type: String,
     required: [true, 'El telefono es obligatorio']
+  },
+  picprofile: String,
+  about: {
+    type: String,
+    default: 'Nos encantaría que nos contaras un poco acerca de ti!'
   },
   password: {
     type: String,
@@ -19,3 +28,5 @@ const UserSchema = new mongoose.Schema({
     default: Date.now
   }
 })
+
+module.exports = mongoose.model('User', UserSchema)

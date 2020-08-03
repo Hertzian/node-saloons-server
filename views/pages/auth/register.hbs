@@ -1,22 +1,33 @@
 <div class="row d-flex justify-content-center align-items-center">
   <div class="col-md-8">
     <div class="card">
-      <img class="card-img-top" src="/img/cover.jpg" alt="Card image cap">
+      <img class="card-img-top" src="/img/cover.jpg" alt="registro">
       <div class="card-header card-header-primary">
         <h4 class="card-title">Regístrate</h4>
-        <p class="card-category">Si ya tienes una cuenta <a href="/register">ingresa</a></p>
+        <p class="card-category">Si ya tienes una cuenta ingresa <a href="/auth/login">aquí</a></p>
       </div>
+
       <div class="card-body">
         <form action="/auth/register" method="POST">
           <div class="row">
 
-            <div class="col-md-6">
+            <div class="col-md-8">
               <div class="form-group">
                 <label class="bmd-label-floating">Nombre</label>
                 <input type="text" class="form-control" name="name">
               </div>
             </div>
 
+          </div>
+
+          <div class="row">
+
+            <div class="col-md-6">
+              <div class="form-group">
+                <label class="bmd-label-floating">Email</label>
+                <input type="text" class="form-control" name="email">
+              </div>
+            </div>
             <div class="col-md-6">
               <div class="form-group">
                 <label class="bmd-label-floating">Teléfono</label>
@@ -34,7 +45,6 @@
                 <input type="password" class="form-control" name="password">
               </div>
             </div>
-
             <div class="col-md-6">
               <div class="form-group">
                 <label class="bmd-label-floating">Confirma tu contraseña</label>

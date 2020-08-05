@@ -3,6 +3,7 @@ const path = require('path')
 const dotenv = require('dotenv')
 const hbs = require('express-handlebars')
 dotenv.config({path: './config/config.env'})
+const passport = require('passport')
 const session = require('express-session')
 const flash = require('express-flash')
 const connectDB = require('./config/db')
@@ -11,6 +12,9 @@ const app = express()
 
 //mongoDB
 connectDB()
+
+// passport config
+require('./passportConfig')(passport)
 
 //handlebars
 app.engine('hbs', hbs({

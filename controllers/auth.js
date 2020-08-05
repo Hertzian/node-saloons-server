@@ -14,7 +14,6 @@ exports.loginView = (req, res, next) => {
 // @route   POST /auth/login
 // @access  Public
 exports.login = (req, res, next) => {
-  console.log(req.body)
   passport.authenticate('local', {
     successRedirect: '/users/profile',
     failureRedirect: '/auth/login',
@@ -55,15 +54,9 @@ exports.register = async (req, res, next) => {
   try {
     if(await User.findOne({email: email})){
       errors.push({msg: 'Ya hay un registro con ese email'})
-      console.log(errors)
       return res.render('pages/auth/register', {layout: 'clear', errors, name, email, phone, password, password2})
     }else{
-      await User.create({
-        name: name,
-        email: email,
-        phone: phone,
-        password: await bcrypt.hash(password, 10)
-      })
+      await User.create({name, email, phone, password})
 
       req.flash('success', 'Ya puedes autenticarte')
       res.redirect('/auth/login')

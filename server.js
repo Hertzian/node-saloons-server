@@ -14,7 +14,7 @@ const app = express()
 connectDB()
 
 // passport config
-require('./passportConfig')(passport)
+require('./config/passportConfig')(passport)
 
 //handlebars
 app.engine('hbs', hbs({
@@ -55,6 +55,10 @@ const usersRoutes = require('./routes/users')
 
 // static folder
 app.use(express.static(path.join(__dirname, 'public')))
+
+// passport implementation
+app.use(passport.initialize())
+app.use(passport.session())
 
 // use routes
 app.use('/auth', authRoutes)

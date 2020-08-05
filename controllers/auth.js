@@ -1,5 +1,6 @@
 const bcrypt = require('bcrypt')
 const User = require('../models/User')
+const passport = require('passport')
 
 // @desc    render login page
 // @route   GET /auth/login
@@ -13,9 +14,12 @@ exports.loginView = (req, res, next) => {
 // @route   POST /auth/login
 // @access  Public
 exports.login = (req, res, next) => {
-  console.log('logged in')
   console.log(req.body)
-  res.redirect('/auth/login')
+  passport.authenticate('local', {
+    successRedirect: '/users/profile',
+    failureRedirect: '/auth/login',
+    failureFlash: 'Verifica tus datosSS'
+  })(req, res, next)
 }
 
 // @desc    render register page

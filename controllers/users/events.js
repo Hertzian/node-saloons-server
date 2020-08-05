@@ -1,4 +1,6 @@
 
 exports.eventView = (req, res, next) => {
-  res.render('pages/events/events')
+  res.render('pages/events/events',{
+    eventActive: true
+  })
 }

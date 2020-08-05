@@ -9,7 +9,7 @@ exports.profileView = async (req, res, next) => {
 
     if(user) return res.render('pages/users/profile', {user, userActive: true})
 
-    res.render('pages/users/profile',)
+    res.render('pages/users/profile')
     
   } catch (err) {
     console.log(err)
@@ -23,10 +23,19 @@ exports.profileView = async (req, res, next) => {
 // @access  Private
 exports.profile = async (req, res, next) => {
   try {
+    let {name, email, phone, password, password2, about, picprofile} = req.body
+    console.log(req.body)
+    let editedPass;
+    if(password && password === password2) {
+      editedPass = password
+    }else{
+      editedPass = req.user.password
+    }
+
     await User.findOneAndUpdate(
       {_id: req.user.id},
-      req.body,
-      // {new: true, runValidators: true}
+      {name, email, phone, password: editedPass, about, picprofile},
+      {new: true, runValidators: true}
     )    
 
     req.flash('success', 'Tu perfil se editó correctamente')

@@ -13,11 +13,19 @@ exports.loginView = (req, res, next) => {
 // @route   POST /auth/login
 // @access  Public
 exports.login = (req, res, next) => {
-  passport.authenticate('local', {
-    successRedirect: '/users/profile',
-    failureRedirect: '/auth/login',
-    failureFlash: 'Verifica tus datosSS'
-  })(req, res, next)
+  const user = {
+    name: 'lalo aguilar',
+    email:'lalo@lalo.com',
+    phone: '1234567890',
+    about: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse aperiam provident nihil voluptatibus vel molestias, totam tempora a, odio eius ipsum facere veniam aut ab nesciunt assumenda! Amet, dolorem facere?'
+  }
+  console.log(user, 'logged in!!')
+  res.render('pages/users/profile')
+  // passport.authenticate('local', {
+  //   successRedirect: '/users/profile',
+  //   failureRedirect: '/auth/login',
+  //   failureFlash: 'Verifica tus datosSS'
+  // })(req, res, next)
 }
 
 // @desc    render register page

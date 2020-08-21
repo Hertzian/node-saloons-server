@@ -20,7 +20,7 @@ exports.login = (req, res, next) => {
     about: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse aperiam provident nihil voluptatibus vel molestias, totam tempora a, odio eius ipsum facere veniam aut ab nesciunt assumenda! Amet, dolorem facere?'
   }
   console.log(user, 'logged in!!')
-  res.render('pages/users/profile')
+  res.render('pages/users/profile', {user: user})
   // passport.authenticate('local', {
   //   successRedirect: '/users/profile',
   //   failureRedirect: '/auth/login',

@@ -1,13 +1,13 @@
 const mongoose = require('mongoose')
 
 const EventSchema = new mongoose.Schema({
-  name: {
+  title: {
     type: String,
     required: [true, 'El nombre del evento es obligatorio']
   },
-  date: {
+  start: {
     type: String,
-    required: true
+    default: Date.now
   },
   user: {
     type: mongoose.Schema.ObjectId,

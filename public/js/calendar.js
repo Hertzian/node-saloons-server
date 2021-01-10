@@ -65,3 +65,23 @@ function openModal(e){
   console.log(e.dateStr)
   console.log('kiuboles!')
 }
+
+async function getEvents () {
+  const config = {
+    headers: {
+      Accept: 'Application/json',
+    },
+  }
+  
+  try {
+    const res = await fetch('http://localhost:5000/events/events', config)
+    const data = await res.json()
+
+    console.log(data)
+
+
+  } catch (err) {
+    console.log(err)
+  }
+}
+getEvents()

@@ -10,7 +10,7 @@ exports.profileView = async (req, res, next) => {
     if(user) return res.render('pages/users/profile', {user, userActive: true})
 
     res.render('pages/users/profile')
-    
+
   } catch (err) {
     console.log(err)
     req.flash('error', 'Ocurrió un error')
@@ -24,6 +24,7 @@ exports.profileView = async (req, res, next) => {
 exports.profile = async (req, res, next) => {
   try {
     let {name, email, phone, password, password2, about, picprofile} = req.body
+    
     console.log(req.body)
     let editedPass;
     if(password && password === password2) {
@@ -36,7 +37,7 @@ exports.profile = async (req, res, next) => {
       {_id: req.user.id},
       {name, email, phone, password: editedPass, about, picprofile},
       {new: true, runValidators: true}
-    )    
+    )
 
     req.flash('success', 'Tu perfil se editó correctamente')
     res.redirect('/users/profile')

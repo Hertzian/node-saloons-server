@@ -2,11 +2,13 @@ const express = require('express')
 const path = require('path')
 const dotenv = require('dotenv')
 const hbs = require('express-handlebars')
-dotenv.config({path: './config/config.env'})
+dotenv.config({ path: './config/config.env' })
 const passport = require('passport')
 const session = require('express-session')
 const flash = require('express-flash')
 const connectDB = require('./config/db')
+
+const User = require('./models/User')
 
 const app = express()
 
@@ -17,18 +19,23 @@ connectDB()
 require('./config/passportConfig')(passport)
 
 //handlebars
-app.engine('hbs', hbs({
-  defaultLayout: 'main',
-  extname: 'hbs'
-}))
+app.engine(
+  'hbs',
+  hbs({
+    defaultLayout: 'main',
+    extname: 'hbs',
+  })
+)
 app.set('view engine', 'hbs')
 
 // session
-app.use(session({
-  secret: process.env.SESSION_SECRET,
-  resave: true,
-  saveUninitialized: true
-}))
+app.use(
+  session({
+    secret: process.env.SESSION_SECRET,
+    resave: true,
+    saveUninitialized: true,
+  })
+)
 
 // flash
 app.use(flash())
@@ -43,9 +50,7 @@ app.use((req, res, next) => {
 })
 
 //to parse & enconde req
-app.use(express.urlencoded(
-  {extended: false}
-))
+app.use(express.urlencoded({ extended: false }))
 
 // init routes
 const authRoutes = require('./routes/auth')
@@ -65,9 +70,13 @@ app.use('/auth', authRoutes)
 app.use('/events', eventsRoutes)
 app.use('/saloons', saloonsRoutes)
 app.use('/users', usersRoutes)
-app.use('/', (req, res, next) => res.render('pages/welcome', {layout: 'clear'}))
+app.use('/', (req, res, next) =>
+  res.render('pages/welcome', { layout: 'clear' })
+)
 
 app.listen(
   process.env.PORT,
-  console.log(`Server running in ${process.env.NODE_ENV} mode on port ${process.env.PORT}`)
+  console.log(
+    `Server running in ${process.env.NODE_ENV} mode on port ${process.env.PORT}`
+  )
 )

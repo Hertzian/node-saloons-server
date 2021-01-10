@@ -4,6 +4,7 @@ const Event = require('../../models/Event')
 // @route   GET /events/
 // @access  Private
 exports.eventView = (req, res, next) => {
+  console.log(res)
   res.render('pages/events/events',{
     eventActive: true
   })
@@ -18,7 +19,7 @@ exports.getEvents = async (req, res, next) => {
 
     console.log(events)
     res.status(200).json(events)
-    
+
   } catch (err) {
     console.log(err)
   }
@@ -29,10 +30,11 @@ exports.getEvents = async (req, res, next) => {
 // @access  Private
 exports.newEvent = async (req, res, next) => {
   try {
-    const event = await Event.create({req.body})
+
+    const event = await Event.create(req.body)
 
     res.redirect('')
   } catch (err) {
-    
+
   }
 }
